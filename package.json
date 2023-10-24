@@ -1,0 +1,26 @@
+{
+  "name": "@solar-republic/types",
+  "version": "0.0.1",
+  "description": "Core typings used by several projects",
+  "homepage": "https://starshell.net/",
+  "repository": "github:@solar-republic/types",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "devDependencies": {
+    "@blake.regalia/belt": "^0.19.0",
+    "@blake.regalia/eslint-config-elite": "^0.3.3",
+    "@blake.regalia/tsconfig": "^0.1.2",
+    "@cosmjs/amino": "^0.31.1",
+    "@typescript-eslint/parser": "^6.9.0",
+    "eslint": "^8.52.0",
+    "ts-toolbelt": "^9.6.0",
+    "typescript": "^5.2.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
