@@ -80,3 +80,4 @@ export type SlimCoin<
 	sg_amount: WeakUint128Str,
 	s_denom: s_denom,
 ];
+

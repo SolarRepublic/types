@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
+import type {WeakAccountAddr} from './cosmos';
+
 // actual es type
 // export declare const ES_TYPE: unique symbol;
 export declare const ES_TYPE: 'ES_TYPE';
@@ -186,4 +188,7 @@ export type Coin<
  * Base64-encoded CBOR exchanged with a smart contract
  */
 export type CborBase64<s_subtype extends string=Base64> = SmartContractDatatype<s_subtype, 'String', 'cbor'>;
+
+
+export type AccountAddr = SmartContractDatatype<WeakAccountAddr>;
 
