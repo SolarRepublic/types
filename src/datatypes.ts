@@ -1,11 +1,11 @@
 import type {
 	ES_CLARIFIER,
 	ES_TYPE,
-	Uint128,
-	Uint16,
-	Uint32,
-	Uint64,
-	SmartContractDatatype,  // eslint-disable-line @typescript-eslint/no-unused-vars
+	CwUint128,
+	CwUint16,
+	CwUint32,
+	CwUint64,
+	CosmWasmDatatype,  // eslint-disable-line @typescript-eslint/no-unused-vars
 } from './cosmwasm';
 import type {ReduceSafe} from './reduce';
 import type {JsonObject} from '@blake.regalia/belt';
@@ -64,7 +64,7 @@ export namespace Datatypes {
 	};
 
 	/**
-	 * Weaken the given Datatype, created using one of: {@link SmartContractDatatype}
+	 * Weaken the given Datatype, created using one of: {@link CosmWasmDatatype}
 	 * 
 	 * For example:
 	 * ```

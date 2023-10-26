@@ -29,7 +29,7 @@ type FromCosmWasm<s_symbol extends string> = {
 /**
  * Creates a strong subtype for data that is bound for or returned from a smart contract.
  */
-export type SmartContractDatatype<
+export type CosmWasmDatatype<
 	w_es_type=unknown,
 	s_rust extends string|RustImport=string|RustImport,
 	s_clarifier extends string=string,
@@ -59,61 +59,61 @@ export type SmartContractDatatype<
 /**
  * 8-bit signed integer
  */
-export type Int8<n_amount extends number=number>= SmartContractDatatype<n_amount, 'i8'>;
+export type CwInt8<n_amount extends number=number>= CosmWasmDatatype<n_amount, 'i8'>;
 
 /**
  * 16-bit signed integer
  */
-export type Int16<n_amount extends number=number> = SmartContractDatatype<n_amount, 'i16'>;
+export type CwInt16<n_amount extends number=number> = CosmWasmDatatype<n_amount, 'i16'>;
 
 /**
  * 32-bit signed integer
  */
-export type Int32<n_amount extends number=number> = SmartContractDatatype<n_amount, 'i32'>;
+export type CwInt32<n_amount extends number=number> = CosmWasmDatatype<n_amount, 'i32'>;
 
 /**
  * 64-bit signed integer as a string or bigint
  */
-export type Int64<
+export type CwInt64<
 	z_amount extends bigint|`${bigint}`=`${bigint}`,
-> = SmartContractDatatype<z_amount extends bigint? `${z_amount}`: z_amount, FromCosmWasm<'Int64'>>;
+> = CosmWasmDatatype<z_amount extends bigint? `${z_amount}`: z_amount, FromCosmWasm<'Int64'>>;
 
 /**
  * 128-bit signed integer as a string or bigint
  */
-export type Int128<
+export type CwInt128<
 	z_amount extends bigint|`${bigint}`=bigint,
-> = SmartContractDatatype<z_amount extends bigint? `${z_amount}`: z_amount, FromCosmWasm<'Int128'>>;
+> = CosmWasmDatatype<z_amount extends bigint? `${z_amount}`: z_amount, FromCosmWasm<'Int128'>>;
 
 
 /**
  * 8-bit unsigned integer
  */
-export type Uint8<n_amount extends number=number>= SmartContractDatatype<n_amount, 'u8'>;
+export type CwUint8<n_amount extends number=number>= CosmWasmDatatype<n_amount, 'u8'>;
 
 /**
  * 16-bit unsigned integer
  */
-export type Uint16<n_amount extends number=number> = SmartContractDatatype<n_amount, 'u16'>;
+export type CwUint16<n_amount extends number=number> = CosmWasmDatatype<n_amount, 'u16'>;
 
 /**
  * 32-bit usigned integer
  */
-export type Uint32<n_amount extends number=number> = SmartContractDatatype<n_amount, 'u32'>;
+export type CwUint32<n_amount extends number=number> = CosmWasmDatatype<n_amount, 'u32'>;
 
 /**
  * 64-bit unsigned integer as a string or bigint
  */
-export type Uint64<
+export type CwUint64<
 	z_amount extends bigint|`${bigint}`=`${bigint}`,
-> = SmartContractDatatype<z_amount extends bigint? `${z_amount}`: z_amount, FromCosmWasm<'Uint64'>>;
+> = CosmWasmDatatype<z_amount extends bigint? `${z_amount}`: z_amount, FromCosmWasm<'Uint64'>>;
 
 /**
  * 128-bit unsigned integer as a string or bigint
  */
-export type Uint128<
+export type CwUint128<
 	z_amount extends bigint|`${bigint}`=bigint,
-> = SmartContractDatatype<z_amount extends bigint? `${z_amount}`: z_amount, FromCosmWasm<'Uint128'>>;
+> = CosmWasmDatatype<z_amount extends bigint? `${z_amount}`: z_amount, FromCosmWasm<'Uint128'>>;
 
 
 
@@ -121,7 +121,7 @@ export type Uint128<
  * Base64-encoded bytes
  */
 // workaround for https://github.com/microsoft/TypeScript/issues/37888
-export type Base64<s_subtype extends string=string> = SmartContractDatatype<s_subtype, FromCosmWasm<'Binary'>>;
+export type CwBase64<s_subtype extends string=string> = CosmWasmDatatype<s_subtype, FromCosmWasm<'Binary'>>;
 
 
 type HexLowerChar = `${'0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | 'a' | 'b' | 'c' | 'd' | 'e' | 'f'}`;
@@ -133,19 +133,19 @@ type HexUpperByte = `${HexUpperChar}${HexUpperChar}`;
 type HexUpperShort = `${HexUpperByte}${HexUpperByte}`;
 
 interface HexMethods {
-	toLowerCase(): HexLower;
-	toUpperCase(): HexUpper;
+	toLowerCase(): CwHexLower;
+	toUpperCase(): CwHexUpper;
 }
 
 interface HexLowerMethods extends HexMethods {
-	concat(...a_lowers: HexLower[]): HexLower;
-	concat(...a_uppers: (HexUpper | HexMixed)[]): HexMixed;
+	concat(...a_lowers: CwHexLower[]): CwHexLower;
+	concat(...a_uppers: (CwHexUpper | CwHexMixed)[]): CwHexMixed;
 	charAt(i_pos: number): '' | HexLowerChar;
 }
 
 interface HexUpperMethods extends HexMethods {
-	concat(...a_uppers: HexUpper[]): HexUpper;
-	concat(...a_lowers: (HexLower | HexMixed)[]): HexMixed;
+	concat(...a_uppers: CwHexUpper[]): CwHexUpper;
+	concat(...a_lowers: (CwHexLower | CwHexMixed)[]): CwHexMixed;
 	charAt(i_pos: number): ''| HexUpperChar;
 }
 
@@ -153,42 +153,42 @@ interface HexUpperMethods extends HexMethods {
 /**
  * Hexadecimal-encoded bytes in lowercase
  */
-export type HexLower<s_subtype extends string=string> = SmartContractDatatype<HexLowerMethods & s_subtype, FromCosmWasm<'HexBinary'>, 'hex-lower'>;
+export type CwHexLower<s_subtype extends string=string> = CosmWasmDatatype<HexLowerMethods & s_subtype, FromCosmWasm<'HexBinary'>, 'hex-lower'>;
 
 /**
  * Hexadecimal-encoded bytes in uppercase
  */
-export type HexUpper<s_subtype extends string=string> = SmartContractDatatype<HexUpperMethods & s_subtype, FromCosmWasm<'HexBinary'>, 'hex-upper'>;
+export type CwHexUpper<s_subtype extends string=string> = CosmWasmDatatype<HexUpperMethods & s_subtype, FromCosmWasm<'HexBinary'>, 'hex-upper'>;
 
 /**
  * Hexadecimal-encoded bytes in mixed case
  */
-export type HexMixed<s_subtype extends string=string> = SmartContractDatatype<HexMethods & s_subtype, FromCosmWasm<'HexBinary'>, 'hex-lower' | 'hex-upper'>;
+export type CwHexMixed<s_subtype extends string=string> = CosmWasmDatatype<HexMethods & s_subtype, FromCosmWasm<'HexBinary'>, 'hex-lower' | 'hex-upper'>;
 
 
 /**
  * A unix timestamp value intended exchanged with a smart contract
  */
-export type Timestamp<
+export type CwTimestamp<
 	z_time extends bigint|`${bigint}`=`${bigint}`,
-> = SmartContractDatatype<z_time extends bigint? `${z_time}`: z_time, FromCosmWasm<'Timestamp'>>;
+> = CosmWasmDatatype<z_time extends bigint? `${z_time}`: z_time, FromCosmWasm<'Timestamp'>>;
 
 
 /**
  * JSON serialization of a `cosmos.base.v1beta1.Coin` value exchanged with a smart contract
  */
-export type Coin<
+export type CwCoin<
 	s_denom extends string=string,
-> = SmartContractDatatype<{
+> = CosmWasmDatatype<{
 	readonly denom: s_denom;
-	readonly amount: Uint128;
+	readonly amount: CwUint128;
 }, FromCosmWasm<'Coin'>>;
 
 /**
  * Base64-encoded CBOR exchanged with a smart contract
  */
-export type CborBase64<s_subtype extends string=Base64> = SmartContractDatatype<s_subtype, 'String', 'cbor'>;
+export type CwCborBase64<s_subtype extends string=CwBase64> = CosmWasmDatatype<s_subtype, 'String', 'cbor'>;
 
 
-export type AccountAddr = SmartContractDatatype<WeakAccountAddr>;
+export type CwAccountAddr = CosmWasmDatatype<WeakAccountAddr>;
 

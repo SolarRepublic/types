@@ -11,12 +11,12 @@ import type {Key} from 'ts-toolbelt/out/Any/Key';
 import type {BuiltIn} from 'ts-toolbelt/out/Misc/BuiltIn';
 import type {Has} from 'ts-toolbelt/out/Union/Has';
 
-import type {SmartContractDatatype} from './cosmwasm';
+import type {CosmWasmDatatype} from './cosmwasm';
 
 /**
 * 
 */
-type Bypass = boolean | number | string | BuiltIn | SmartContractDatatype;
+type Bypass = boolean | number | string | BuiltIn | CosmWasmDatatype;
 
 
 /**
