@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
-import type {WeakAccountAddr} from './cosmos';
+import type {WeakAccountAddr, WeakValidatorAddr} from './cosmos';
 
 // actual es type
 // export declare const ES_TYPE: unique symbol;
@@ -191,4 +191,7 @@ export type CwCborBase64<s_subtype extends string=CwBase64> = CosmWasmDatatype<s
 
 
 export type CwAccountAddr = CosmWasmDatatype<WeakAccountAddr>;
+
+
+export type CwValidatorAddr = CosmWasmDatatype<WeakValidatorAddr>;
 
