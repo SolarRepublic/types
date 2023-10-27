@@ -44,9 +44,9 @@ export type CosmosAddrSpace =
  * A Cosmos bech32-encoded address
  */
 export type WeakBech32Addr<
-	s_prefix extends string=string,
+	s_hrp extends string=string,
 	s_space extends CosmosAddrSpace=CosmosAddrSpace,
-> = `${s_prefix}${s_space}1${string}`;
+> = `${s_hrp}${s_space}1${string}`;
 
 /**
  * A Cosmos bech32-encoded pubkey
@@ -60,15 +60,15 @@ export type WeakBech32Pub<
  * A Cosmos bech32-encoded account address
  */
 export type WeakAccountAddr<
-	s_prefix extends string=string,
-> = WeakBech32Addr<s_prefix, ''>;
+	s_hrp extends string=string,
+> = WeakBech32Addr<s_hrp, ''>;
 
 /**
  * A Cosmos bech32-encoded validator address
  */
 export type WeakValidatorAddr<
-	s_prefix extends string=string,
-> = WeakBech32Addr<s_prefix, 'valoper'>;
+	s_hrp extends string=string,
+> = WeakBech32Addr<s_hrp, 'valoper'>;
 
 
 /**

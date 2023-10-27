@@ -190,8 +190,12 @@ export type CwCoin<
 export type CwCborBase64<s_subtype extends string=CwBase64> = CosmWasmDatatype<s_subtype, 'String', 'cbor'>;
 
 
-export type CwAccountAddr = CosmWasmDatatype<WeakAccountAddr>;
+export type CwAccountAddr<
+	s_hrp extends string=string,
+> = CosmWasmDatatype<WeakAccountAddr<s_hrp>>;
 
 
-export type CwValidatorAddr = CosmWasmDatatype<WeakValidatorAddr>;
+export type CwValidatorAddr<
+	s_hrp extends string=string,
+> = CosmWasmDatatype<WeakValidatorAddr<s_hrp>>;
 
