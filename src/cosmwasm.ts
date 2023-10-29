@@ -20,7 +20,10 @@ export type RustImport = {
 	symbol: string;
 };
 
-type FromCosmWasm<s_symbol extends string> = {
+/**
+ * Defines the source of the rust crate
+ */
+export type FromCosmWasm<s_symbol extends string> = {
 	crate: 'cosmwasm_std';
 	symbol: s_symbol;
 };
