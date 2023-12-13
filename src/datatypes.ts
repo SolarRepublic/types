@@ -1,6 +1,4 @@
 import type {
-	ES_CLARIFIER,
-	ES_TYPE,
 	CwUint128,
 	CwUint16,
 	CwUint32,
@@ -8,7 +6,7 @@ import type {
 	CosmWasmDatatype,  // eslint-disable-line @typescript-eslint/no-unused-vars
 } from './cosmwasm';
 import type {ReduceSafe} from './reduce';
-import type {JsonObject} from '@blake.regalia/belt';
+import type {ES_TYPE, JsonObject, TYPE_ID} from '@blake.regalia/belt';
 
 /**
  * Namespace offering utility types for adjusting the strength of declared datatypes.
@@ -20,7 +18,7 @@ export namespace Datatypes {
 	export type Strength = 'weakest' | 'mild' | 'strongest';
 
 	type MetaDescriptor = {
-		[ES_CLARIFIER]?: any;
+		[TYPE_ID]?: any;
 		[ES_TYPE]: any;
 	};
 

@@ -14,14 +14,14 @@
     "build": "tsc"
   },
   "devDependencies": {
-    "@blake.regalia/belt": "^0.20.2",
+    "@blake.regalia/belt": "^0.27.1",
     "@blake.regalia/eslint-config-elite": "^0.3.3",
-    "@blake.regalia/tsconfig": "^0.1.2",
-    "@cosmjs/amino": "^0.31.3",
-    "@typescript-eslint/parser": "^6.9.0",
-    "eslint": "^8.52.0",
+    "@blake.regalia/tsconfig": "^0.2.0",
+    "@cosmjs/amino": "^0.32.1",
+    "@typescript-eslint/parser": "^6.14.0",
+    "eslint": "^8.55.0",
     "ts-toolbelt": "^9.6.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.3"
   },
   "publishConfig": {
     "access": "public"

@@ -2,17 +2,20 @@
 
 import type {WeakAccountAddr, WeakValidatorAddr} from './cosmos';
 
+import type {ES_TYPE, TYPE_ID} from '@blake.regalia/belt';
+
 // actual es type
 // export declare const ES_TYPE: unique symbol;
-export declare const ES_TYPE: 'ES_TYPE';
+// export declare const ES_TYPE: 'ES_TYPE';
 
 // helps discriminate between datatypes that are otherwise equivalent
 // export declare const ES_CLARIFIER: unique symbol;
-export declare const ES_CLARIFIER: 'ES_CLARIFIER';
+// export declare const TYPE_ID: 'ES_CLARIFIER';
 
 // how to represent in rust
 // export declare const RUST_TYPE: unique symbol;
-export declare const RUST_TYPE: 'RUST_TYPE';
+// export declare const RUST_TYPE: 'RUST_TYPE';
+export const RUST_TYPE = Symbol('rust-type');
 
 // defines how to import the symbol in rust
 export type RustImport = {
@@ -42,7 +45,7 @@ export type CosmWasmDatatype<
 		[RUST_TYPE]: s_rust;
 	} & w_es_type
 	: {
-		[ES_CLARIFIER]?: s_clarifier;
+		[TYPE_ID]?: s_clarifier;
 		[ES_TYPE]: w_es_type;
 		[RUST_TYPE]: s_rust;
 	} & w_es_type;
