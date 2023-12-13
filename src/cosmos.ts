@@ -75,7 +75,7 @@ export type WeakValidatorAddr<
  * Concisely represents a `cosmos.base.v1beta1.Coin`
  */
 export type SlimCoin<
-	s_denom extends string='uscrt',
+	s_denom extends string=string,
 > = readonly [
 	sg_amount: WeakUint128Str,
 	s_denom: s_denom,
