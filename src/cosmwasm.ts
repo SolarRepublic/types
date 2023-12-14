@@ -45,7 +45,7 @@ export type CosmWasmDatatype<
 		[RUST_TYPE]: s_rust;
 	} & w_es_type
 	: {
-		[TYPE_ID]?: s_clarifier;
+		[TYPE_ID]: s_clarifier;
 		[ES_TYPE]: w_es_type;
 		[RUST_TYPE]: s_rust;
 	} & w_es_type;
