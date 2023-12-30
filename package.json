@@ -11,7 +11,7 @@
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc && npx tsc-esm-fix --target='dist'"
   },
   "devDependencies": {
     "@blake.regalia/belt": "^0.27.1",

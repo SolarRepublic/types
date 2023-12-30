@@ -108,6 +108,11 @@ export type CwUint16<n_amount extends number=number> = CosmWasmDatatype<n_amount
 export type CwUint32<n_amount extends number=number> = CosmWasmDatatype<n_amount, 'u32'>;
 
 /**
+ * 64-bit unsigned integer in Rust, but a 53-bit number in ES
+ */
+export type CwUint53<n_amount extends number=number> = CosmWasmDatatype<n_amount, 'u32', 'es-u53'>;
+
+/**
  * 64-bit unsigned integer as a string or bigint
  */
 export type CwUint64<
