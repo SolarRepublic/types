@@ -14,11 +14,11 @@
     "build": "tsc && npx tsc-esm-fix --target='dist'"
   },
   "devDependencies": {
-    "@blake.regalia/belt": "^0.31.0",
+    "@blake.regalia/belt": "^0.31.1",
     "@blake.regalia/eslint-config-elite": "^0.4.0",
     "@blake.regalia/tsconfig": "^0.2.0",
     "@cosmjs/amino": "^0.32.2",
-    "@typescript-eslint/parser": "^6.18.1",
+    "@typescript-eslint/parser": "^6.19.0",
     "eslint": "^8.56.0",
     "ts-toolbelt": "^9.6.0",
     "typescript": "^5.3.3"
