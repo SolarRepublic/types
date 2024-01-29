@@ -18,7 +18,7 @@ export namespace Datatypes {
 	export type Strength = 'weakest' | 'mild' | 'strongest';
 
 	type MetaDescriptor = {
-		[TYPE_ID]: any;
+		// [TYPE_ID]: any;
 		[ES_TYPE]: any;
 	};
 
