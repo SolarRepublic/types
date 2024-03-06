@@ -14,7 +14,7 @@
     "build": "tsc && npx tsc-esm-fix --target='dist'"
   },
   "devDependencies": {
-    "@blake.regalia/belt": "^0.32.2",
+    "@blake.regalia/belt": "^0.32.5",
     "@blake.regalia/eslint-config-elite": "^0.4.4",
     "@blake.regalia/tsconfig": "^0.2.0",
     "@cosmjs/amino": "^0.32.2",
