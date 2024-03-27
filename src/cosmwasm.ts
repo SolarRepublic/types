@@ -2,7 +2,7 @@
 
 import type {WeakAccountAddr, WeakValidatorAddr} from './cosmos';
 
-import type {ES_TYPE, TYPE_ID} from '@blake.regalia/belt';
+import type {ES_TYPE, NaiveBase64, NaiveHexLower, NaiveHexUpper, TYPE_ID} from '@blake.regalia/belt';
 
 // actual es type
 // export declare const ES_TYPE: unique symbol;
@@ -132,7 +132,7 @@ export type CwUint128<
  * Base64-encoded bytes
  */
 // workaround for https://github.com/microsoft/TypeScript/issues/37888
-export type CwBase64<s_subtype extends string=string> = CosmWasmDatatype<s_subtype, FromCosmWasm<'Binary'>>;
+export type CwBase64<s_subtype extends string=string> = CosmWasmDatatype<s_subtype, FromCosmWasm<'Binary'>, NaiveBase64[typeof TYPE_ID]>;
 
 
 type HexLowerChar = `${'0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | 'a' | 'b' | 'c' | 'd' | 'e' | 'f'}`;
@@ -164,17 +164,17 @@ interface HexUpperMethods extends HexMethods {
 /**
  * Hexadecimal-encoded bytes in lowercase
  */
-export type CwHexLower<s_subtype extends string=string> = CosmWasmDatatype<HexLowerMethods & s_subtype, FromCosmWasm<'HexBinary'>, 'hex-lower'>;
+export type CwHexLower<s_subtype extends string=string> = CosmWasmDatatype<HexLowerMethods & s_subtype, FromCosmWasm<'HexBinary'>, NaiveHexLower[typeof TYPE_ID]>;
 
 /**
  * Hexadecimal-encoded bytes in uppercase
  */
-export type CwHexUpper<s_subtype extends string=string> = CosmWasmDatatype<HexUpperMethods & s_subtype, FromCosmWasm<'HexBinary'>, 'hex-upper'>;
+export type CwHexUpper<s_subtype extends string=string> = CosmWasmDatatype<HexUpperMethods & s_subtype, FromCosmWasm<'HexBinary'>, NaiveHexUpper[typeof TYPE_ID]>;
 
 /**
  * Hexadecimal-encoded bytes in mixed case
  */
-export type CwHexMixed<s_subtype extends string=string> = CosmWasmDatatype<HexMethods & s_subtype, FromCosmWasm<'HexBinary'>, 'hex-lower' | 'hex-upper'>;
+export type CwHexMixed<s_subtype extends string=string> = CosmWasmDatatype<HexMethods & s_subtype, FromCosmWasm<'HexBinary'>, NaiveHexLower[typeof TYPE_ID] | NaiveHexUpper[typeof TYPE_ID]>;
 
 
 /**
