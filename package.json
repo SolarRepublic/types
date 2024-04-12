@@ -14,14 +14,14 @@
     "build": "tsc && pnpm exec tsc-esm-fix --target='dist'"
   },
   "devDependencies": {
-    "@blake.regalia/belt": "^0.34.1",
+    "@blake.regalia/belt": "^0.35.6",
     "@blake.regalia/eslint-config-elite": "^0.4.4",
     "@blake.regalia/tsconfig": "^0.2.0",
     "@cosmjs/amino": "^0.32.3",
-    "@typescript-eslint/parser": "^7.4.0",
+    "@typescript-eslint/parser": "^7.6.0",
     "eslint": "^8.57.0",
     "ts-toolbelt": "^9.6.0",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.5"
   },
   "publishConfig": {
     "access": "public"
