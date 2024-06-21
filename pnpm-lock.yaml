@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@blake.regalia/belt':
-        specifier: ^0.36.3
-        version: 0.36.3
+        specifier: ^0.37.0
+        version: 0.37.0
       '@blake.regalia/eslint-config-elite':
         specifier: ^0.4.4
         version: 0.4.4(@typescript-eslint/parser@7.13.1(eslint@8.57.0)(typescript@5.5.2))(eslint@8.57.0)(typescript@5.5.2)
@@ -46,8 +46,8 @@ packages:
   '@blake.regalia/belt@0.31.1':
     resolution: {integrity: sha512-VuL8sfhn+lYGAow5xht5jjV75k0CfudZpWI0IWdgc2uj20X6UfdLdq4BuA6CAnVEkyWb/NVhU6cs1o5TWtzS0A==}
 
-  '@blake.regalia/belt@0.36.3':
-    resolution: {integrity: sha512-Ll/71tAlDxttXjIzmgTyWIsT8inKhkH92V1flPtoCpZ0psHZxikQsZvfyvx2Ub9fVz5NprTup5g25mkhNPj7fg==}
+  '@blake.regalia/belt@0.37.0':
+    resolution: {integrity: sha512-kpAXIn9ioUBVRjwvtyyjZRzwQ2MRJbI/AKY+4maQZD+daG/9tbCN0ET8BP9WzfqD0jZ8i5TIjEByjUdWpzn1MQ==}
 
   '@blake.regalia/eslint-config-elite@0.4.4':
     resolution: {integrity: sha512-Lcpi2Y2yiY2WXDzr/mfrZNYSCx6J4se8iOG/WkCdqBlaolZH0QHyyJpgqzDG1XitlQ/I/ikpruhB1F6DwEEbfg==}
@@ -968,7 +968,7 @@ snapshots:
 
   '@blake.regalia/belt@0.31.1': {}
 
-  '@blake.regalia/belt@0.36.3': {}
+  '@blake.regalia/belt@0.37.0': {}
 
   '@blake.regalia/eslint-config-elite@0.4.4(@typescript-eslint/parser@7.13.1(eslint@8.57.0)(typescript@5.5.2))(eslint@8.57.0)(typescript@5.5.2)':
     dependencies:
