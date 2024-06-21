@@ -13,4 +13,8 @@ export type NetworkedUrl = `http://10${Subnet8}${AnyPortAndPath}`
 
 export type HttpsUrl = `https://${string}`;
 
+export type WssUrl = `wss://${string}`;
+
+export type SecureWebUrl = HttpsUrl | WssUrl;
+
 export type TrustedContextUrl = HttpsUrl | LocalhostUrl | NetworkedUrl;
