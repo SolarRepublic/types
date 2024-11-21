@@ -1,12 +1,8 @@
 import type {
-	CwUint128,
-	CwUint16,
-	CwUint32,
-	CwUint64,
 	CosmWasmDatatype,  // eslint-disable-line @typescript-eslint/no-unused-vars
 } from './cosmwasm';
 import type {ReduceSafe} from './reduce';
-import type {ES_TYPE, JsonObject, TYPE_ID} from '@blake.regalia/belt';
+import type {ES_TYPE, JsonObject} from '@blake.regalia/belt';
 
 /**
  * Namespace offering utility types for adjusting the strength of declared datatypes.
@@ -55,7 +51,7 @@ export namespace Datatypes {
 						: w_value;
 
 	type WeakenObject<
-		h_obj extends JsonObject,
+		h_obj extends object,
 		s_strength extends Strength,
 	> = {
 		[si_key in keyof h_obj]: WeakenValue<h_obj[si_key], s_strength>;
@@ -74,7 +70,7 @@ export namespace Datatypes {
 	 * ```
 	 */
 	export type Weaken<
-		h_obj extends JsonObject,
+		h_obj extends object,
 		s_strength extends Strength='weakest',
 	> = ReduceSafe<10, WeakenObject<h_obj, s_strength>>;
 
