@@ -238,10 +238,11 @@ export type SignedAminoTx<
  */
 export interface SignedAminoDoc<
 	h_params extends JsonObject=JsonObject,
+	s_type extends string=string,
 	s_base64 extends string=CwBase64,
 > extends JsonObject {
 	readonly params: h_params & {
 		readonly chain_id: string;
 	};
-	readonly signature: TypedStdSignature<s_base64>;
+	readonly signature: TypedStdSignature<s_type, s_base64>;
 }
