@@ -31,7 +31,7 @@ export type Snip24QueryPermitMsg = TypedAminoMsg<'query_permit', Snip24QueryPerm
 export type Snip24QueryPermitSigned<
 	g_params extends Snip24QueryPermitParams=Snip24QueryPermitParams,
 	s_base64 extends string=CwBase64,
-> = SignedAminoDoc<g_params, s_base64>;
+> = SignedAminoDoc<g_params, 'tendermint/PubKeySecp256k1', s_base64>;
 
 /**
  * Params for SNIP-52 seed update
@@ -55,4 +55,4 @@ export type Snip52NotificationSeedUpdateMsg = TypedAminoMsg<'notification_seed',
 export type Snip52NotificationSeedUpdateSigned<
 	g_params extends Snip52NotificationSeedUpdateParams=Snip52NotificationSeedUpdateParams,
 	s_base64 extends string=CwBase64,
-> = SignedAminoDoc<g_params, s_base64>;
+> = SignedAminoDoc<g_params, 'tendermint/PubKeySecp256k1', s_base64>;
