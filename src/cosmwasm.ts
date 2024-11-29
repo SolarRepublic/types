@@ -200,12 +200,16 @@ export type CwCoin<
  */
 export type CwCborBase64<s_subtype extends string=CwBase64> = CosmWasmDatatype<s_subtype, 'String', 'cbor'>;
 
-
+/**
+ * Strongly-typed bech32 account address for use with CosmWasm contract
+ */
 export type CwAccountAddr<
 	s_hrp extends string=string,
 > = CosmWasmDatatype<WeakAccountAddr<s_hrp>>;
 
-
+/**
+ * Strongly-typed bech32 validator address for use with CosmWasm contract
+ */
 export type CwValidatorAddr<
 	s_hrp extends string=string,
 > = CosmWasmDatatype<WeakValidatorAddr<s_hrp>>;

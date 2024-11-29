@@ -1,44 +1,58 @@
-import type {WeakAccountAddr} from './cosmos';
-import type {JsonObject} from '@blake.regalia/belt';
-import type {AminoMsg} from '@cosmjs/amino';
+import type {SignedAminoDoc, TypedAminoMsg, WeakAccountAddr} from './cosmos';
+import type {CwAccountAddr, CwBase64} from './cosmwasm';
 
+/**
+ * Specialized type for Secret addressess
+ */
+export type WeakSecretAccAddr = WeakAccountAddr<'secret'>;
 
-export type SecretQueryPermitConfig = {
+/**
+ * Specialized type for Secret addressess
+ */
+export type CwSecretAccAddr = CwAccountAddr<'secret'>;
+
+/**
+ * Params for SNIP-24 query permit
+ */
+export type Snip24QueryPermitParams = {
 	readonly permit_name: string;
-	readonly allowed_tokens: WeakAccountAddr<'secret'>[];
+	readonly allowed_tokens: WeakSecretAccAddr[];
 	readonly permissions: string[];
 };
 
+/**
+ * A {@link TypedAminoMsg} for SNIP-24 query permits
+ */
+export type Snip24QueryPermitMsg = TypedAminoMsg<'query_permit', Snip24QueryPermitParams>;
 
-export type SignedAminoDoc<
-	h_config extends JsonObject,
-	s_subtype extends string=string,
+/**
+ * A signed SNIP-24 query permit
+ */
+export type Snip24QueryPermitSigned<
+	g_params extends Snip24QueryPermitParams=Snip24QueryPermitParams,
+	s_base64 extends string=CwBase64,
+> = SignedAminoDoc<g_params, s_base64>;
+
+/**
+ * Params for SNIP-52 seed update
+ */
+export type Snip52NotificationSeedUpdateParams<
+	s_addr extends WeakSecretAccAddr=CwSecretAccAddr,
+	s_base64 extends string=CwBase64,
 > = {
-	params: h_config & {
-		chain_id: string;
-	};
-	signature: {
-		pub_key: {
-			type: 'tendermint/PubKeySecp256k1';
-			// value: Base64<s_subtype>;
-			value: string;
-		};
-		// signature: Base64<s_subtype>;
-		signature: string;
-	};
+	readonly contract: s_addr;
+	readonly previous_seed: s_base64;
 };
 
-export type SecretQueryPermit<
-	h_config extends SecretQueryPermitConfig=SecretQueryPermitConfig,
-	s_subtype extends string=string,
-> = SignedAminoDoc<h_config, s_subtype>;
+/**
+ * A {@link TypedAminoMsg} for SNIP-52 notification seed update
+ */
+export type Snip52NotificationSeedUpdateMsg = TypedAminoMsg<'notification_seed', Snip52NotificationSeedUpdateMsg>;
 
-export type MsgQueryPermit = TypedAminoMsg<'query_permit', SecretQueryPermitConfig>;
-
-export interface TypedAminoMsg<
-	si_type extends string=string,
-	g_value extends JsonObject=JsonObject,
-> extends AminoMsg, JsonObject {
-	readonly type: si_type;
-	readonly value: g_value;
-}
+/**
+ * A signed SNIP-52 notification seed update
+ */
+export type Snip52NotificationSeedUpdateSigned<
+	g_params extends Snip52NotificationSeedUpdateParams=Snip52NotificationSeedUpdateParams,
+	s_base64 extends string=CwBase64,
+> = SignedAminoDoc<g_params, s_base64>;
