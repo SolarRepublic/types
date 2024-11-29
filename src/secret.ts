@@ -47,7 +47,10 @@ export type Snip52NotificationSeedUpdateParams<
 /**
  * A {@link TypedAminoMsg} for SNIP-52 notification seed update
  */
-export type Snip52NotificationSeedUpdateMsg = TypedAminoMsg<'notification_seed', Snip52NotificationSeedUpdateMsg>;
+export type Snip52NotificationSeedUpdateMsg<
+	s_addr extends WeakSecretAccAddr=CwSecretAccAddr,
+	s_base64 extends string=CwBase64,
+> = TypedAminoMsg<'notification_seed', Snip52NotificationSeedUpdateParams<s_addr, s_base64>>;
 
 /**
  * A signed SNIP-52 notification seed update
