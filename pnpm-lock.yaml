@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@blake.regalia/belt':
-        specifier: ^0.45.3
-        version: 0.45.3
+        specifier: ^0.48.3
+        version: 0.48.3
       '@blake.regalia/eslint-config-elite':
         specifier: ^0.4.4
         version: 0.4.4(@typescript-eslint/parser@7.13.1(eslint@8.57.0)(typescript@5.7.2))(eslint@8.57.0)(typescript@5.7.2)
@@ -21,8 +21,8 @@ importers:
         specifier: ^0.32.4
         version: 0.32.4
       '@types/web':
-        specifier: ^0.0.183
-        version: 0.0.183
+        specifier: ^0.0.188
+        version: 0.0.188
       '@typescript-eslint/parser':
         specifier: ^7.13.1
         version: 7.13.1(eslint@8.57.0)(typescript@5.7.2)
@@ -49,8 +49,8 @@ packages:
   '@blake.regalia/belt@0.31.1':
     resolution: {integrity: sha512-VuL8sfhn+lYGAow5xht5jjV75k0CfudZpWI0IWdgc2uj20X6UfdLdq4BuA6CAnVEkyWb/NVhU6cs1o5TWtzS0A==}
 
-  '@blake.regalia/belt@0.45.3':
-    resolution: {integrity: sha512-5gK4+Qx8mnSpXbAfMCR1G0OxT8kduqTAXgHCdPMMvNbVIDH8vpAFkpzD74n1orzhmpC58/7/k5e5qtUkUbsvRw==}
+  '@blake.regalia/belt@0.48.3':
+    resolution: {integrity: sha512-yJEGexWM4b2UoMCJXplIn80L5WKqHBqv97UU9O613pz+WMJujWbFsXorXKkl8AYFc4VKsO7pLKq4jiKBjKl7TA==}
 
   '@blake.regalia/eslint-config-elite@0.4.4':
     resolution: {integrity: sha512-Lcpi2Y2yiY2WXDzr/mfrZNYSCx6J4se8iOG/WkCdqBlaolZH0QHyyJpgqzDG1XitlQ/I/ikpruhB1F6DwEEbfg==}
@@ -150,8 +150,8 @@ packages:
   '@types/semver@7.5.8':
     resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
 
-  '@types/web@0.0.183':
-    resolution: {integrity: sha512-O0VfT4Y5IMbGsuYo9ydjdbMcNx7JZmGXLBq6gpf1KRhN2KafbosWYl12QhbJReZP0vz3KaLR/2bGK5ggKN1j9w==}
+  '@types/web@0.0.188':
+    resolution: {integrity: sha512-dKowKMo4P0W6f2U5i66uJ+/MlSHzBnznI0ExP1xnpcF/9/CJQT4VYvIDqz7ocWDvd0pB1QPgjOe4dVSycQrbuA==}
 
   '@typescript-eslint/eslint-plugin@7.4.0':
     resolution: {integrity: sha512-yHMQ/oFaM7HZdVrVm/M2WHaNPgyuJH4WelkSVEWSSsir34kxW2kDJCxlXRhhGWEsMN0WAW/vLpKfKVcm8k+MPw==}
@@ -974,7 +974,7 @@ snapshots:
 
   '@blake.regalia/belt@0.31.1': {}
 
-  '@blake.regalia/belt@0.45.3': {}
+  '@blake.regalia/belt@0.48.3': {}
 
   '@blake.regalia/eslint-config-elite@0.4.4(@typescript-eslint/parser@7.13.1(eslint@8.57.0)(typescript@5.7.2))(eslint@8.57.0)(typescript@5.7.2)':
     dependencies:
@@ -1101,7 +1101,7 @@ snapshots:
 
   '@types/semver@7.5.8': {}
 
-  '@types/web@0.0.183': {}
+  '@types/web@0.0.188': {}
 
   '@typescript-eslint/eslint-plugin@7.4.0(@typescript-eslint/parser@7.13.1(eslint@8.57.0)(typescript@5.7.2))(eslint@8.57.0)(typescript@5.7.2)':
     dependencies:
