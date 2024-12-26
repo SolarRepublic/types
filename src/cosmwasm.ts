@@ -14,8 +14,8 @@ import type {ES_TYPE, NaiveBase64, NaiveHexLower, NaiveHexUpper, TYPE_ID} from '
 
 // how to represent in rust
 // export declare const RUST_TYPE: unique symbol;
-// export declare const RUST_TYPE: 'RUST_TYPE';
-export const RUST_TYPE = Symbol('rust-type');
+export declare const RUST_TYPE: '__RUST_TYPE';
+// export const RUST_TYPE = Symbol('rust-type');
 
 // defines how to import the symbol in rust
 export type RustImport = {
