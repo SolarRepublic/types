@@ -14,13 +14,13 @@
     "build": "tsc && pnpm exec tsc-esm-fix --target='dist'"
   },
   "devDependencies": {
-    "@blake.regalia/belt": "^0.48.3",
-    "@blake.regalia/eslint-config-elite": "^0.4.4",
+    "@blake.regalia/belt": "^0.49.0",
+    "@blake.regalia/eslint-config-elite": "^0.5.5",
     "@blake.regalia/tsconfig": "^0.2.0",
     "@cosmjs/amino": "^0.32.4",
     "@types/web": "^0.0.188",
-    "@typescript-eslint/parser": "^7.13.1",
-    "eslint": "^8.57.0",
+    "@typescript-eslint/parser": "^8.18.2",
+    "eslint": "^9.17.0",
     "ts-toolbelt": "^9.6.0",
     "typescript": "^5.7.2"
   },

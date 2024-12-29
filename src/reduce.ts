@@ -79,7 +79,7 @@ type ReduceDeep<
 						: {
 							[w_key in keyof z_thing]: ReduceDeep<z_thing[w_key], z_thing | as_seen, c_subdepth>
 						} & unknown
-				)>
+			)>
 		: never
 	: never
 >;

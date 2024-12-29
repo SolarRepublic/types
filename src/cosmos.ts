@@ -143,7 +143,7 @@ export interface TypedAminoMsg<
  * For compatibility with Cosmos' {@link StdSignDoc}
  */
 export interface TypedStdSignDoc<
-	a_msgs extends readonly TypedAminoMsg<string, JsonObject>[]=TypedAminoMsg[],
+	a_msgs extends readonly TypedAminoMsg[]=TypedAminoMsg[],
 	s_u128 extends string=CwUint128,
 	g_fee extends TypedStdFee<string, WeakAccountAddr>=TypedStdFee,
 > extends StdSignDoc, JsonObject<a_msgs> {
@@ -187,7 +187,7 @@ export interface Adr036SignDoc<
  * For compatibility with Cosmos' {@link AminoSignResponse}
  */
 export interface TypedAminoSignResponse<
-	a_msgs extends readonly TypedAminoMsg<string, JsonObject>[]=TypedAminoMsg[],
+	a_msgs extends readonly TypedAminoMsg[]=TypedAminoMsg[],
 	s_u128 extends string=CwUint128,
 	g_fee extends TypedStdFee<string, WeakAccountAddr>=TypedStdFee,
 	s_base64 extends string=CwBase64,
@@ -200,7 +200,7 @@ export interface TypedAminoSignResponse<
  * For compatibility with Cosmos' {@link StdTx}
  */
 export interface TypedStdTx<
-	a_msgs extends readonly TypedAminoMsg<string, JsonObject>[]=readonly TypedAminoMsg[],
+	a_msgs extends readonly TypedAminoMsg[]=readonly TypedAminoMsg[],
 	g_fee extends TypedStdFee<string, WeakAccountAddr>=TypedStdFee,
 	a_sigs extends readonly TypedStdSignature<string, string>[]=readonly TypedStdSignature[],
 > extends StdTx, JsonObject<a_msgs | a_sigs> {
@@ -215,7 +215,7 @@ export interface TypedStdTx<
  */
 export type AminoTx<
 	g_ext extends JsonObject=JsonObject,
-	a_msgs extends readonly TypedAminoMsg<string, JsonObject>[]=readonly TypedAminoMsg[],
+	a_msgs extends readonly TypedAminoMsg[]=readonly TypedAminoMsg[],
 	g_fee extends TypedStdFee<string, WeakAccountAddr>=TypedStdFee,
 	a_sigs extends readonly TypedStdSignature<string, string>[]=readonly TypedStdSignature[],
 > = TypedAminoMsg<'cosmos-sdk/StdTx', g_ext & TypedStdTx<a_msgs, g_fee, a_sigs>>;
@@ -226,7 +226,7 @@ export type AminoTx<
 export type SignedAminoTx<
 	s_type extends string=string,
 	s_base64 extends string=CwBase64,
-	a_msgs extends readonly TypedAminoMsg<string, JsonObject>[]=readonly TypedAminoMsg[],
+	a_msgs extends readonly TypedAminoMsg[]=readonly TypedAminoMsg[],
 	g_fee extends TypedStdFee<string, WeakAccountAddr>=TypedStdFee,
 	a_sigs extends readonly TypedStdSignature<string, string>[]=readonly TypedStdSignature<string, s_base64>[],
 > = AminoTx<{
