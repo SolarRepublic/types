@@ -1,9 +1,11 @@
 {
-	"extends": "@blake.regalia/tsconfig/tsconfig.node.json",
+	"extends": "@blake.regalia/tsconfig/tsconfig.core.json",
 
 	"compilerOptions": {
 		"baseUrl": ".",
 		"outDir": "dist",
+
+		"moduleResolution": "bundler",
 
 		"declaration": true,
 		"declarationDir": "dist"
