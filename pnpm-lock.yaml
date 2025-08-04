@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@blake.regalia/belt':
-        specifier: ^0.57.7
-        version: 0.57.7(@typescript-eslint/parser@8.39.0(eslint@9.32.0)(typescript@5.9.2))(eslint@9.32.0)(typescript@5.9.2)
+        specifier: ^0.57.8
+        version: 0.57.8(@typescript-eslint/parser@8.39.0(eslint@9.32.0)(typescript@5.9.2))(eslint@9.32.0)(typescript@5.9.2)
       '@blake.regalia/eslint-config-elite':
         specifier: ^0.5.22
         version: 0.5.22(@typescript-eslint/parser@8.39.0(eslint@9.32.0)(typescript@5.9.2))(eslint@9.32.0)(typescript@5.9.2)
@@ -49,8 +49,8 @@ packages:
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
 
-  '@blake.regalia/belt@0.57.7':
-    resolution: {integrity: sha512-8TNjU63Pi17H+asq9UWbymj522fT7H9XVvcuLQKrLXLY2/paE6wxMc6HaROYT/yCCYtkE9yBbk3UVdTzr40HQg==}
+  '@blake.regalia/belt@0.57.8':
+    resolution: {integrity: sha512-39eQdYQNMrfOkdr93cakpa8izJIfPTdbfgtYBWx9LkGqrptd2yx05VTMs/H67+l+npbyC/U9LTHZipaYEqYKAA==}
 
   '@blake.regalia/eslint-config-elite@0.5.22':
     resolution: {integrity: sha512-shIWIbRx0fDCKiW7WE8Rr2C9M9uOSGJ6juNsnkloUd+6K1HZQ+xdRO4T1TWCVNTOZpF5kafVKn8yMaV/hy0xLQ==}
@@ -1246,7 +1246,7 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@blake.regalia/belt@0.57.7(@typescript-eslint/parser@8.39.0(eslint@9.32.0)(typescript@5.9.2))(eslint@9.32.0)(typescript@5.9.2)':
+  '@blake.regalia/belt@0.57.8(@typescript-eslint/parser@8.39.0(eslint@9.32.0)(typescript@5.9.2))(eslint@9.32.0)(typescript@5.9.2)':
     dependencies:
       '@blake.regalia/eslint-config-elite': 0.5.22(@typescript-eslint/parser@8.39.0(eslint@9.32.0)(typescript@5.9.2))(eslint@9.32.0)(typescript@5.9.2)
       globals: 16.3.0
