@@ -15,15 +15,16 @@
     "build": "tsc && pnpm exec tsc-esm-fix --target='dist'"
   },
   "devDependencies": {
-    "@blake.regalia/belt": "^0.53.3",
-    "@blake.regalia/eslint-config-elite": "^0.5.16",
+    "@blake.regalia/belt": "^0.57.5",
+    "@blake.regalia/eslint-config-elite": "^0.5.22",
     "@blake.regalia/tsconfig": "^0.3.7",
     "@cosmjs/amino": "^0.32.4",
-    "@types/web": "^0.0.192",
-    "@typescript-eslint/parser": "^8.19.1",
-    "eslint": "^9.18.0",
+    "@types/web": "^0.0.259",
+    "@typescript-eslint/parser": "^8.39.0",
+    "eslint": "^9.32.0",
     "ts-toolbelt": "^9.6.0",
-    "typescript": "^5.7.3"
+    "tsc-esm-fix": "^3.1.2",
+    "typescript": "^5.9.2"
   },
   "publishConfig": {
     "access": "public"
